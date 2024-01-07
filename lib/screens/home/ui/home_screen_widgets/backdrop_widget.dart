@@ -10,29 +10,29 @@ class BackdropWidget extends StatelessWidget {
     return Stack(
       children: [
         Align(
-          alignment: const AlignmentDirectional(3, -0.3),
+          alignment: const AlignmentDirectional(0, -1.1),
           child: Container(
-            height: 300,
-            width: 300,
-            decoration: const BoxDecoration(
-                shape: BoxShape.circle, color: Colors.deepPurple),
-          ),
-        ),
-        Align(
-          alignment: const AlignmentDirectional(-3, -0.3),
-          child: Container(
-            height: 300,
-            width: 300,
-            decoration: const BoxDecoration(
-                shape: BoxShape.circle, color: Colors.deepPurple),
-          ),
-        ),
-        Align(
-          alignment: const AlignmentDirectional(0, -1.2),
-          child: Container(
-            height: 300,
-            width: 300,
+            height: 364,
+            width: 364,
             decoration: const BoxDecoration(color: Colors.orange),
+          ),
+        ),
+        Align(
+          alignment: const AlignmentDirectional(7, 0.5),
+          child: Container(
+            height: 300,
+            width: 300,
+            decoration: const BoxDecoration(
+                shape: BoxShape.circle, color: Colors.deepPurple),
+          ),
+        ),
+        Align(
+          alignment: const AlignmentDirectional(-7, 0.5),
+          child: Container(
+            height: 300,
+            width: 300,
+            decoration: const BoxDecoration(
+                shape: BoxShape.circle, color: Colors.deepPurple),
           ),
         ),
         BackdropFilter(

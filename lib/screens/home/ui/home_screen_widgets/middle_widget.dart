@@ -1,3 +1,5 @@
+// Includes current temperature,weather description,date & time,and other details like(sunrise,sunset,high temp.,low temp.).
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:weather_app/screens/home/bloc/home_bloc.dart';
@@ -135,7 +137,7 @@ class _MiddleWidgetState extends State<MiddleWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      "High",
+                      "Temp Max",
                       style: TextStyle(
                           fontSize: 12,
                           color: Colors.white60,
@@ -157,7 +159,7 @@ class _MiddleWidgetState extends State<MiddleWidget> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+              padding: const EdgeInsets.fromLTRB(24, 0, 0, 0),
               child: Row(
                 children: [
                   Image.asset(
@@ -168,7 +170,7 @@ class _MiddleWidgetState extends State<MiddleWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Low",
+                        "Temp Min",
                         style: TextStyle(
                             fontSize: 12,
                             color: Colors.white60,
@@ -195,5 +197,3 @@ class _MiddleWidgetState extends State<MiddleWidget> {
     );
   }
 }
-
-// Includes current temperature,weather description,date & time,and other details like(sunrise,sunset,high temp.,low temp.).

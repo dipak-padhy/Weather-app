@@ -1,3 +1,5 @@
+//Includes current location,greetings and current weather condition.
+
 import 'package:flutter/material.dart';
 import 'package:weather_app/screens/home/bloc/home_bloc.dart';
 
@@ -76,5 +78,3 @@ class _TopWidgetState extends State<TopWidget> {
     );
   }
 }
-
-//Includes current location,greetings and current weather condition.

@@ -1,8 +1,10 @@
+// Includes 4 containers showcasing today's wind speed,pressure,cloudiness,humidity data.
+
 import 'package:flutter/material.dart';
 import 'package:weather_app/screens/home/bloc/home_bloc.dart';
 
 class BottomWidget extends StatelessWidget {
-  const BottomWidget({super.key,required this.state});
+  const BottomWidget({super.key, required this.state});
 
   final HomeLoadingSuccessState state;
 
@@ -15,13 +17,21 @@ class BottomWidget extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Today's Wind Speed is :- ${state.weather.windSpeed} m/s"),padding: const EdgeInsets.all(20),margin: const EdgeInsets.all(20) ,behavior: SnackBarBehavior.floating,elevation: 24,shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))));
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text(
+                        "Today's Wind Speed is :- ${state.weather.windSpeed} m/s"),
+                    padding: const EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(20),
+                    behavior: SnackBarBehavior.floating,
+                    elevation: 24,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))));
               },
               child: Container(
                 height: 160,
                 width: 160,
                 decoration: BoxDecoration(
-                  color: Colors.grey[900],
+                  color: Colors.white.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -41,8 +51,7 @@ class BottomWidget extends StatelessWidget {
                           color: Colors.white,
                           fontWeight: FontWeight.w300),
                     ),
-                    Text(
-                        "${state.weather.windSpeed.toString()} m/s",
+                    Text("${state.weather.windSpeed.toString()} m/s",
                         style: const TextStyle(
                             fontSize: 12,
                             color: Colors.white60,
@@ -53,13 +62,21 @@ class BottomWidget extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Today's Wind Pressure is :- ${state.weather.pressure} pa"),padding: const EdgeInsets.all(20),margin: const EdgeInsets.all(20) ,behavior: SnackBarBehavior.floating,elevation: 24,shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))));
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text(
+                        "Today's Wind Pressure is :- ${state.weather.pressure} pa"),
+                    padding: const EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(20),
+                    behavior: SnackBarBehavior.floating,
+                    elevation: 24,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))));
               },
               child: Container(
                 height: 160,
                 width: 160,
                 decoration: BoxDecoration(
-                  color: Colors.grey[900],
+                  color: Colors.white.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -79,8 +96,7 @@ class BottomWidget extends StatelessWidget {
                           color: Colors.white,
                           fontWeight: FontWeight.w300),
                     ),
-                    Text(
-                        "${state.weather.pressure.toString()} pa",
+                    Text("${state.weather.pressure.toString()} pa",
                         style: const TextStyle(
                             fontSize: 12,
                             color: Colors.white60,
@@ -99,13 +115,21 @@ class BottomWidget extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Today's Clouds Mapped in Okta's Scale is :- ${state.weather.cloudiness} %"),padding: const EdgeInsets.all(20),margin: const EdgeInsets.all(20) ,behavior: SnackBarBehavior.floating,elevation: 24,shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))));
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text(
+                        "Today's Clouds Mapped in Okta's Scale is :- ${state.weather.cloudiness} %"),
+                    padding: const EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(20),
+                    behavior: SnackBarBehavior.floating,
+                    elevation: 24,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))));
               },
               child: Container(
                 height: 160,
                 width: 160,
                 decoration: BoxDecoration(
-                  color: Colors.grey[900],
+                  color: Colors.white.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -125,8 +149,7 @@ class BottomWidget extends StatelessWidget {
                           color: Colors.white,
                           fontWeight: FontWeight.w300),
                     ),
-                    Text(
-                        "${state.weather.cloudiness!.toInt()}%",
+                    Text("${state.weather.cloudiness!.toInt()}%",
                         style: const TextStyle(
                             fontSize: 12,
                             color: Colors.white60,
@@ -137,13 +160,22 @@ class BottomWidget extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Today's Humidity is :- ${state.weather.humidity} %"),padding: const EdgeInsets.all(20),margin: const EdgeInsets.all(20),behavior: SnackBarBehavior.floating,elevation: 24,shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20),)));
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text(
+                        "Today's Humidity is :- ${state.weather.humidity} %"),
+                    padding: const EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(20),
+                    behavior: SnackBarBehavior.floating,
+                    elevation: 24,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    )));
               },
               child: Container(
                 height: 160,
                 width: 160,
                 decoration: BoxDecoration(
-                  color: Colors.grey[900],
+                  color: Colors.white.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -163,8 +195,7 @@ class BottomWidget extends StatelessWidget {
                           color: Colors.white,
                           fontWeight: FontWeight.w300),
                     ),
-                    Text(
-                        "${state.weather.humidity!.toInt()}%",
+                    Text("${state.weather.humidity!.toInt()}%",
                         style: const TextStyle(
                             fontSize: 12,
                             color: Colors.white60,
@@ -176,9 +207,6 @@ class BottomWidget extends StatelessWidget {
           ],
         ),
       ],
-
     );
   }
 }
-
-// Includes 4 containers showcasing today's wind speed,pressure,cloudiness,humidity data.
